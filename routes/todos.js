@@ -3,6 +3,7 @@ var router = require('express').Router();
 var AV = require('leanengine');
 
 var Todo = AV.Object.extend('Todo');
+var User = AV.Object.extend('_User');
 
 // 查询 Todo 列表
 router.get('/', function(req, res, next) {
@@ -38,7 +39,7 @@ router.post('/', function(req, res, next) {
 });
 
 // 注册
-router.post('/login', function(req, res, next) {
+router.post('/logins', function(req, res, next) {
   var username = req.body.username;
   var password = req.body.password;
   var password2 = req.body.password2;
@@ -49,7 +50,7 @@ router.post('/login', function(req, res, next) {
   user.set('username',username);
   user.set('password',password);
   user.save().then(function(user) {
-    res.redirect('/logins');
+    res.redirect('/');
   }).catch(next);
 });
 
