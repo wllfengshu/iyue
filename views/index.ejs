@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+	<meta charset="utf-8" />
+	<title>音乐初步</title>
+	<link rel="icon" href="/img/favicon.ico"/>
+	<link rel="stylesheet" href="/css/index.css" />
+	<link rel="stylesheet" href="/stylesheets/style.css">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+	<script type="text/javascript" src="/js/index.js" ></script>
+	<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>LeanEngine</h1>
+    <p>这是 LeanEngine 的示例应用</p>
+    <p>当前时间：<%= currentTime %></p>
+    <p><a href="/todos">一个简单的「TODO 列表」示例</a></p>
+
+	<h1>音名练习</h1>
+	<table class="table">
+	    <thead>
+	    </thead>
+	    <tbody>
+	        <tr>
+	            <td class="do1">1</td>
+	            <td class="re2">2</td>
+	            <td class="mi3">3</td>
+	            <td class="fa4">4</td>
+	            <td class="sol5">5</td>
+	            <td class="la6">6</td>
+	            <td class="si7">7</td>
+	        </tr>
+	        <tr>
+	            <td class="do1">do</td>
+	            <td class="re2">re</td>
+	            <td class="mi3">mi</td>
+	            <td class="fa4">fa</td>
+	            <td class="sol5">sol</td>
+	            <td class="la6">la</td>
+	            <td class="si7">si</td>
+	        </tr>
+	    </tbody>
+	    <tfoot>
+	            音名对照表（按键盘听对应的唱名）
+	    </tfoot>
+	</table>
+	<h3>1 看音名，按唱名</h3>
+	<button onclick="onPhoneme4sing()" class="btn btn-default">开始</button>
+	<a>随机生成音名（1 2 3 4 5 6 7）</a>
+	<a id="iname"></a>
+	
+	
+	<h3>2 听唱名，按音名</h3>
+	<button onclick="onSing4Phoneme()" class="btn btn-default">开始</button>
+	
+	
+</body>
+</html>
