@@ -37,4 +37,20 @@ router.post('/', function(req, res, next) {
   }).catch(next);
 });
 
+// 注册
+router.post('/login', function(req, res, next) {
+  var username = req.body.username;
+  var password = req.body.password;
+  var password2 = req.body.password2;
+  if(password != password2){
+  	console.log("两次密码不一致");
+  }
+  var user = new User();
+  user.set('username',username);
+  user.set('password',password);
+  user.save().then(function(user) {
+    res.redirect('/logins');
+  }).catch(next);
+});
+
 module.exports = router;

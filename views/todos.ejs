@@ -10,6 +10,13 @@
       <input type="text" name="content" />
       <input type="submit" value="新增" />
     </form>
+    
+    <form action="/logins" method="POST">
+      <input type="text" name="username" />
+      <input type="text" name="password" />
+      <input type="text" name="password2" />
+      <input type="submit" value="注册" />
+    </form>
     <ul>
       <% for(var i=0; i<todos.length; i++) {%>
       <li><%= todos[i].get('content') %></li>
